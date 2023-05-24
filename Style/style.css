@@ -1,0 +1,102 @@
+body, html{
+    background-color: #E5E5E5;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.encriptadorHTML{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Bloques*/
+.logoimg{
+    margin-left: 1%;
+    padding: 2% 2% 0 2%;
+}
+.encriptador{
+ 
+    width: 60%;
+
+    padding: 2% 2%;
+    margin: 2% 2% 0 2%;
+    display: grid;
+    align-content: space-between;    
+}
+.texto_Encriptado{
+    width: 20%;
+ 
+    padding: 2% 2%;
+    display: grid;
+    margin: 2% 2% 2% 2%;
+    border-radius: 3%;
+    background-color: white;
+    align-content: space-between;
+
+}
+
+
+/*Encriptador*/
+.botones{
+    gap: 25px;
+    display: flex;
+    justify-content:center;
+}
+
+
+
+.textoE{
+
+    height: 100%;
+    background-color: #E5E5E5;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    padding: 2% 0 2% 0;
+    font-size: 40px;
+
+
+
+    outline: none;
+    resize: none;
+}
+.textoEncriptado{
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+
+
+    outline: none;
+    resize: none;
+}
+textarea ::-webkit-scrollbar
+{
+    width: 0;
+}
+
+
+input.botonEn, input.botonDes{
+    background-color: #0A3871;
+    color: white;
+    width: 40%;
+    height: 67px;
+    border: none;
+    font-size: 1em;
+    padding: 2%;
+    border-radius: 25px;
+}
+.botonC{
+    background-color: #0A3871;
+    color: white;
+    border: none;
+    font-size: 1em;
+    padding: 2%;
+    border-radius: 25px;
+    height: 67px;
+
+}
