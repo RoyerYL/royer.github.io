@@ -1,4 +1,3 @@
-
 var ret="";
 
 function convetir(letra)
@@ -26,12 +25,24 @@ function convetir(letra)
 
 function mostrar(valor)
 {
-    ret= valor;//encriptar(texto);
+    ret= valor;
     return ret;
+}
+function textoNoEncontrado()
+{
+    document.getElementById("texto1").style.display="none";
+    document.getElementById("texto2").style.display="grid";
+}
+
+function textoEncontrado()
+{
+    document.getElementById("texto1").style.display="grid";
+    document.getElementById("texto2").style.display="none";
 }
 
 function encriptar(texto)
 {
+    
     let encriptado="";
     let i=0;
     let len=texto.length;
@@ -93,20 +104,49 @@ function desencriptar(texto)
 
 }
 
-
-//document.write(encriptar("hola"));
-//document.write("---encriptado---");
-//document.write(desencriptar("enterimesaioberufat"))
-//const botonEncriptar= document.querySelector("button");
-//document.getElementById("botonE").onclick=encriptar;
-
-
 function mostrarEncriptado()
 {
-    document.getElementById('texto_E').innerHTML =encriptar(ret);
+    if (ret.length==0){
+        textoNoEncontrado();
+    } else{
+        textoEncontrado();
+    document.getElementById('textoEncriptado').innerHTML =encriptar(ret.toLowerCase());
+}
 }
 
 function mostrarDesencriptar()
 {
-    document.getElementById('texto_E').innerHTML=desencriptar(ret);
+    if (ret.length==0){
+        textoNoEncontrado();
+    } else{
+        textoEncontrado();
+        document.getElementById('textoEncriptado').innerHTML=desencriptar(ret.toLowerCase());
+    }
+}
+
+const $content=document.getElementById('textoEncriptado');
+
+
+function copiarTexto()
+{
+    cp(document.getElementById('textoEncriptado').innerHTML);
+}
+function cp(texto)
+{
+ let areatexto=document.createElement('textarea');
+ areatexto.value=texto;
+ areatexto.setAttribute('readonly','')
+ areatexto.style.position='absolute';
+ areatexto.style.left='-9999px';
+
+ document.body.appendChild(areatexto);
+
+ let seleccionado = document.getSelection().rangeCount>0 ? document.getSelection().getRangeAt(0) : false;
+
+ areatexto.select();
+
+ document.execCommand('copy');
+
+ document.body.removeChild(areatexto);
+ 
 }
