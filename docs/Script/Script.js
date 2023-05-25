@@ -71,17 +71,17 @@ function desencriptar(texto)
         switch (texto[i])
         {
         case 'i':
-            i+=1;
+            i+=3;
             deco+="i";
             break;
 
         case 'a':
-            i+=4;
+            i+=1;
             deco+="a";
             break;
 
         case 'e':
-            i+=3;
+            i+=4;
             deco+= "e";
             break;
 
