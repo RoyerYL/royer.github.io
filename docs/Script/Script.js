@@ -5,12 +5,12 @@ function convetir(letra)
     switch (letra)
     {
         case 'a':
-            return "enter";
+            return "ai";
             break;
         case 'e':
-            return "imes"
+            return "enter"
         case 'i':
-            return "ai";
+            return "imes";
             break;
         case 'o':
             return "ober";
@@ -70,17 +70,17 @@ function desencriptar(texto)
     {
         switch (texto[i])
         {
-        case 'a':
+        case 'i':
             i+=1;
             deco+="i";
             break;
 
-        case 'e':
+        case 'a':
             i+=4;
             deco+="a";
             break;
 
-        case 'i':
+        case 'e':
             i+=3;
             deco+= "e";
             break;
