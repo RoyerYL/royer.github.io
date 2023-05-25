@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
-<html lang="en">
+<html>
     <head>
         <link rel="stylesheet" href="../Style/style.css">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -24,23 +24,26 @@
                 
 
                 <div class="botones_EyD">
-                    <input class="botonEn" type="button" value="Encriptar" onclick="mostrarEncriptado()">
-                    <input class="botonDes" type="button" value="Desencriptar" onclick="mostrarDesencriptar();">
+                    <input class="botonEncriptar" type="button" value="Encriptar" onclick="mostrarEncriptado()">
+                    <input class="botonDesencriptar" type="button" value="Desencriptar" onclick="mostrarDesencriptar();">
                 </div>
             </div>
-
+            
             <div id="texto1" class="texto_Encriptado">
 
                 <textarea id="textoEncriptado" cols="50%" rows="10%" readonly placeholder="Encriptado"  autocapitalize> </textarea>                
                
-                <input id="copyButon" class="botonCopy" type="button" value="Copiar" onclick="copiarTexto();">
+                <input id="copyButon" class="botonCopiar" type="button" value="Copiar" onclick="copiarTexto();">
             </div>
 
             <div id="texto2" class="texto_Encriptado2">
-                <img class="noEncontrado" src="../Style/Muñeco.png">
-                <textarea id="texoNoEncontrado1" readonly placeholder="Ninún mensaje fue encontrado"></textarea>                
-                <textarea id="texoNoEncontrado2" readonly placeholder="ingrese el texto que deseesencriptar o desencriptar"></textarea>                
-                
+                <div id="texto2_1">
+                    <img class="noEncontrado" src="../Style/Muñeco.png">
+                </div>
+                <div id="texto2_2">
+                    <textarea id="texoNoEncontrado1" readonly placeholder="Ningún mensaje fue encontrado"></textarea>                
+                    <textarea id="texoNoEncontrado2" readonly placeholder="ingrese el texto que desees encriptar o desencriptar"></textarea>                
+                </div>
             </div>
 
 

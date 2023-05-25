@@ -111,7 +111,9 @@ function mostrarEncriptado()
     } else{
         textoEncontrado();
     document.getElementById('textoEncriptado').innerHTML =encriptar(ret.toLowerCase());
-}
+    }
+    document.getElementById("textoEncriptado").focus();
+
 }
 
 function mostrarDesencriptar()
@@ -122,10 +124,8 @@ function mostrarDesencriptar()
         textoEncontrado();
         document.getElementById('textoEncriptado').innerHTML=desencriptar(ret.toLowerCase());
     }
+    document.getElementById("textoEncriptado").focus();s
 }
-
-const $content=document.getElementById('textoEncriptado');
-
 
 function copiarTexto()
 {
